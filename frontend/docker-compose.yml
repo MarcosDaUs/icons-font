@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  frontend:
+    restart: always
+    env_file: ./.env
+    build:
+      context: .
+      args:
+        - NODE_ENV=$NODE_ENV
+        - REACT_APP_ICONS_API_URL=$REACT_APP_ICONS_API_URL
+        - REACT_APP_ICONS_CLOUDFRONT=$REACT_APP_ICONS_CLOUDFRONT
+    ports:
+      - $FRONTEND_LOCAL_PORT:$PORT

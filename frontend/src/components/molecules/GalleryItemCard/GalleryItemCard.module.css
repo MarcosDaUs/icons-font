@@ -1,0 +1,32 @@
+.iconCard,
+.iconCard__icon,
+.iconCard__name {
+  transition: all 0.8s;
+}
+
+.iconCard:hover .iconCard__name {
+  max-width: 120px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding-top: 0.875rem;
+  overflow-wrap: break-word;
+}
+
+.iconCard:hover .iconCard__icon {
+  display: flex;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.iconCard__selected {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.iconCard:hover .iconCard__icon,
+.iconCard:hover .iconCard__name,
+.iconCard__selected .iconCard__name,
+.iconCard__selected .iconCard__icon {
+  color: #797979;
+  fill: #797979;
+}
