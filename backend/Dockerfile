@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm i
+RUN npm ci
 
 COPY . .
 
@@ -25,7 +25,7 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
-RUN npm i --only=production --omit=dev
+RUN npm ci --only=production --omit=dev
 
 COPY --chown=node:node --from=builder /app/dist ./dist
 
