@@ -6,7 +6,7 @@ export enum IconsApiEndpoints {
 }
 
 const getBaseIconsApiUrl = (path: string) => {
-  const urlIconsApi = String(process.env.REACT_APP_ICONS_API_URL) ?? "";
+  const urlIconsApi = "";
   return `${urlIconsApi}/${path}`;
 };
 
